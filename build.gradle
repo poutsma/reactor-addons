@@ -248,6 +248,25 @@ project('reactor-extra') {
   }
 }
 
+project('reactor-multipart') {
+  description = 'Reactor Multipart'
+
+
+  dependencies {
+	compile "io.netty:netty-buffer:4.1.37.Final"
+  }
+
+  jar {
+    manifest {
+      attributes 'Implementation-Title': 'reactor-multipart',
+              'Implementation-Version': version,
+              'Automatic-Module-Name': 'reactor.multipart'
+    }
+  }
+}
+
+
+
 task release {
   subprojects.each{
 	if(it.version.endsWith('SNAPSHOT')) return

@@ -16,4 +16,5 @@
 rootProject.name = 'reactor-addons'
 
 include 'reactor-adapter',
-		'reactor-extra'
+		'reactor-extra',
+		'reactor-multipart'
